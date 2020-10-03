@@ -6,6 +6,9 @@ This is one community-maintained repository of zig packages.
 If you have an activly maintained package, feel free to create a PR that adds your package to the repository! If you feel like it, you're also free to add other peoples packages!
 
 ### Verification
+
+![Repository Validation](https://github.com/ziglibs/repository/workflows/Repository%20Validation/badge.svg?event=push)
+
 This repository will use the CI to verify if all PRs keep the database consistent. If you want to locally test this before doing the PR, just call `zig build verify` in the root folder.
 
 ## Repository structure
