@@ -1,0 +1,9 @@
+{
+  "author": "xq",
+  "description": "Serial port configuration library for Zig",
+  "git": "https://github.com/MasterQ32/zig-serial",
+  "root_file": "/serial.zig",
+  "tags": [
+    "os"
+  ]
+}

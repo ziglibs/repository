@@ -1,0 +1,9 @@
+{
+  "author": "xq",
+  "description": "A smallest-common-subset of socket functions for crossplatform networking, TCP & UDP",
+  "git": "https://github.com/MasterQ32/zig-network",
+  "root_file": "/network.zig",
+  "tags": [
+    "networking"
+  ]
+}
