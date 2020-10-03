@@ -1,9 +1,9 @@
 {
   "author": "xq",
-  "tags": [
-    "os"
-  ],
+  "description": "Simple-to-use argument parser with struct-based config",
   "git": "https://github.com/MasterQ32/zig-args",
   "root_file": "/args.zig",
-  "description": "Simple-to-use argument parser with struct-based config"
+  "tags": [
+    "os"
+  ]
 }

@@ -5,6 +5,9 @@ This is one community-maintained repository of zig packages.
 ## Contributions
 If you have an activly maintained package, feel free to create a PR that adds your package to the repository! If you feel like it, you're also free to add other peoples packages!
 
+### Verification
+This repository will use the CI to verify if all PRs keep the database consistent. If you want to locally test this before doing the PR, just call `zig build verify` in the root folder.
+
 ## Repository structure
 
 The repository contains two major data sets: *packages* and *tags*.
@@ -43,3 +46,6 @@ A folder containing a single file per tag. Each file is a json file following th
 The fields have the following meaning:
 - `description` is a short description of what kind of packages can be found in this group.
 
+### `tools/`
+
+This folder contains the sources of the verification tools and other nice things.
