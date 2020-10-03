@@ -1,0 +1,7 @@
+{
+  "author": "hejsil",
+  "tags": [],
+  "git": "https://github.com/Hejsil/zig-bench",
+  "root_file": "/bench.zig",
+  "description": "Simple benchmarking library"
+}

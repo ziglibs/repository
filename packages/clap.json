@@ -1,0 +1,9 @@
+{
+  "author": "hejsil",
+  "tags": [
+    "os"
+  ],
+  "git": "https://github.com/Hejsil/zig-clap",
+  "root_file": "/clap.zig",
+  "description": "Simple command line argument parsing library"
+}

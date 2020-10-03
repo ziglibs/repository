@@ -1,0 +1,9 @@
+{
+  "author": "ziglibs",
+  "tags": [
+    "os"
+  ],
+  "git": "https://github.com/ziglibs/known-folders",
+  "root_file": "/known-folders.zig",
+  "description": "Provides access to well-known folders across several operating systems"
+}
