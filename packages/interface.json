@@ -1,0 +1,9 @@
+{
+  "author": "alexnask",
+  "tags": [
+    "meta"
+  ],
+  "git": "https://github.com/alexnask/interface.zig",
+  "root_file": "/interface.zig",
+  "description": "Dynamic dispatch for zig made easy"
+}

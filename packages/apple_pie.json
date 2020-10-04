@@ -1,0 +1,9 @@
+{
+  "author": "Luukdegram",
+  "tags": [
+    "networking"
+  ],
+  "git": "https://github.com/Luukdegram/apple_pie",
+  "root_file": "/src/apple_pie.zig",
+  "description": "Basic HTTP server implementation in Zig"
+}
