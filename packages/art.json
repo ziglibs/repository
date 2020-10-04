@@ -1,0 +1,7 @@
+{
+  "author": "travisstaloch",
+  "tags": [],
+  "git": "https://github.com/travisstaloch/art.zig",
+  "root_file": "/src/art.zig",
+  "description": "An Adaptive Radix Tree ported from c to zig"
+}

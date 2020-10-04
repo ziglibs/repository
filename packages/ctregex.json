@@ -1,0 +1,10 @@
+{
+  "author": "alexnask",
+  "tags": [
+    "string",
+    "meta"
+  ],
+  "git": "https://github.com/alexnask/ctregex.zig",
+  "root_file": "/ctregex.zig",
+  "description": "Compile time regular expressions in zig"
+}

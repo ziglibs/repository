@@ -1,0 +1,10 @@
+{
+  "author": "xq",
+  "tags": [
+    "game",
+    "math"
+  ],
+  "git": "https://github.com/ziglibs/zlm",
+  "root_file": "/zlm.zig",
+  "description": "Zig linear mathematics library suitable for games"
+}

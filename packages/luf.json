@@ -1,0 +1,9 @@
+{
+  "author": "Luukdegram",
+  "tags": [
+    "programming-language"
+  ],
+  "git": "https://github.com/Luukdegram/luf",
+  "root_file": "/src/luf.zig",
+  "description": "Statically typed, embeddable, scripting language written in Zig."
+}

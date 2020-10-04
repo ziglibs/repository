@@ -1,0 +1,10 @@
+{
+  "author": "xq",
+  "tags": [
+    "game",
+    "binding"
+  ],
+  "git": "https://github.com/ziglibs/zgl",
+  "root_file": "/zgl.zig",
+  "description": "Zig OpenGL wrapper based on libepoxy"
+}
