@@ -1,5 +1,7 @@
 const std = @import("std");
 
+usingnamespace @import("shared.zig");
+
 var tag_collection: std.StringHashMap(void) = undefined;
 
 var allocator: *std.mem.Allocator = undefined;
@@ -89,10 +91,6 @@ fn verifyTagJson(
     json_data: []const u8,
     errors: *std.ArrayList([]const u8),
 ) !void {
-    const TagDescription = struct {
-        description: []const u8,
-    };
-
     var options = std.json.ParseOptions{
         .allocator = allocator,
         .duplicate_field_behavior = .Error,
@@ -113,14 +111,6 @@ fn verifyPackageJson(
     json_data: []const u8,
     errors: *std.ArrayList([]const u8),
 ) !void {
-    const PackageDescription = struct {
-        author: []const u8,
-        tags: [][]const u8,
-        git: []const u8,
-        root_file: []const u8,
-        description: []const u8,
-    };
-
     var options = std.json.ParseOptions{
         .allocator = allocator,
         .duplicate_field_behavior = .Error,
