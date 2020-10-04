@@ -6,6 +6,6 @@ pub const PackageDescription = struct {
     description: []const u8,
 };
 
-const TagDescription = struct {
+pub const TagDescription = struct {
     description: []const u8,
 };
