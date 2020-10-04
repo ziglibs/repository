@@ -1,0 +1,9 @@
+{
+  "author": "leecannon",
+  "tags": [
+    "hardware"
+  ],
+  "git": "https://github.com/leecannon/zig-x86_64",
+  "root_file": "/src/index.zig",
+  "description": "Support for x86_64 specific instructions (e.g. TLB flush), registers (e.g. control registers), and structures (e.g. page tables)"
+}
