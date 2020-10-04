@@ -107,6 +107,8 @@ fn readPackage() !void {
         var iterator = std.mem.split(tag_string, ",");
         while (iterator.next()) |part| {
             const tag = std.mem.trim(u8, part, " \t\r\n");
+            if (tag.len == 0)
+                continue;
             if (tag_collection.get(tag) == null) {
                 try stdout.print("Tag '{}' does not exist!\n", .{tag});
                 bad = true;
@@ -118,6 +120,8 @@ fn readPackage() !void {
         iterator = std.mem.split(tag_string, ",");
         while (iterator.next()) |part| {
             const tag = std.mem.trim(u8, part, " \t\r\n");
+            if (tag.len == 0)
+                continue;
 
             const str = try allocator.dupe(u8, tag);
             errdefer allocator.free(str);
