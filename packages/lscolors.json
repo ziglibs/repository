@@ -3,7 +3,7 @@
   "tags": [
     "os"
   ],
-  "git": "https://github.com/ziglibs/zig-lscolors",
+  "git": "https://github.com/ziglibs/lscolors",
   "root_file": "/src/main.zig",
   "description": "A zig library for colorizing paths according to LS_COLORS"
 }
