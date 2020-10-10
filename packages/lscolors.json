@@ -1,7 +1,8 @@
 {
   "author": "joachimschmidt557",
   "tags": [
-    "os"
+    "os",
+    "terminal"
   ],
   "git": "https://github.com/ziglibs/lscolors",
   "root_file": "/src/main.zig",
