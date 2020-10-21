@@ -1,0 +1,9 @@
+{
+  "author": "Nathan Bourgeois",
+  "tags": [
+    "game"
+  ],
+  "git": "https://github.com/zPSP-Dev/Zig-PSP",
+  "root_file": "/src/psp/pspsdk.zig",
+  "description": "A PSP Toolchain allowing users to create PSP homebrew applications! (You need a custom build.zig!)"
+}
