@@ -1,0 +1,9 @@
+{
+  "author": "jayschwa",
+  "tags": [
+    "os"
+  ],
+  "git": "https://github.com/jayschwa/dos.zig",
+  "root_file": "/src/dos.zig",
+  "description": "DOS SDK for Zig"
+}
