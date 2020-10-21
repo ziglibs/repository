@@ -5,6 +5,6 @@
     "binding"
   ],
   "git": "https://github.com/Snektron/vulkan-zig",
-  "root_file": "generator/index.zig",
+  "root_file": "/generator/index.zig",
   "description": "Build-time Vulkan binding generator for Zig"
 }
