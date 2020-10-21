@@ -4,6 +4,6 @@
     "game"
   ],
   "git": "https://github.com/Iridescence-Technologies/zglfw",
-  "root_file": "./src/glfw.zig",
+  "root_file": "/src/glfw.zig",
   "description": "An idiomatic GLFW wrapper in Zig!"
 }
