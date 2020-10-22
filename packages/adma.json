@@ -1,0 +1,9 @@
+{
+  "author": "Suirad",
+  "tags": [
+    "allocator"
+  ],
+  "git": "https://github.com/suirad/adma",
+  "root_file": "/src/adma.zig",
+  "description": "Multithread aware Slab Allocator"
+}
