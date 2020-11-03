@@ -143,6 +143,7 @@ fn readPackage() !void {
             .String = .{},
         },
     }, file.writer());
+    try file.writeAll("\n");
 }
 
 fn freePackage(pkg: *PackageDescription) void {
