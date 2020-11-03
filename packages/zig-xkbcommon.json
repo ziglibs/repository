@@ -1,0 +1,9 @@
+{
+  "author": "Isaac Freund",
+  "tags": [
+    "binding"
+  ],
+  "git": "https://github.com/ifreund/zig-xkbcommon",
+  "root_file": "/src/xkbcommon.zig",
+  "description": "zig bindings for xkbcommon"
+}
