@@ -129,10 +129,12 @@ fn verifyPackageJson(
     if (pkg.description.len == 0)
         try errors.append("description is empty!");
 
-    if (pkg.root_file.len == 0) {
-        try errors.append("root_file is empty!");
-    } else if (!std.mem.startsWith(u8, pkg.root_file, "/")) {
-        try errors.append("root_file must start with a '/'!");
+    if (pkg.root_file) |root| {
+        if (root.len == 0) {
+            try errors.append("root_file is empty! Use 'null' if the root file is unrequired.");
+        } else if (!std.mem.startsWith(u8, root, "/")) {
+            try errors.append("root_file must start with a '/'!");
+        }
     }
 
     for (pkg.tags) |tag| {
