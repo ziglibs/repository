@@ -1,0 +1,9 @@
+{
+  "author": "Isaac Freund",
+  "tags": [
+    "binding"
+  ],
+  "git": "https://github.com/swaywm/zig-wlroots",
+  "root_file": "/src/wlroots.zig",
+  "description": "zig bindings for wlroots"
+}

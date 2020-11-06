@@ -1,0 +1,9 @@
+{
+  "author": "Isaac Freund",
+  "tags": [
+    "binding"
+  ],
+  "git": "https://github.com/ifreund/zig-pixman",
+  "root_file": "/pixman.zig",
+  "description": "zig bindings for pixman"
+}
