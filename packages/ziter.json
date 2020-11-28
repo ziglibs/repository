@@ -1,0 +1,10 @@
+{
+  "author": "hejsil",
+  "tags": [
+    "functional",
+    "math"
+  ],
+  "git": "https://github.com/Hejsil/ziter",
+  "root_file": "/ziter.zig",
+  "description": "Iterator library"
+}
