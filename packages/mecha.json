@@ -1,0 +1,10 @@
+{
+  "author": "hejsil",
+  "tags": [
+    "functional",
+    "string"
+  ],
+  "git": "https://github.com/Hejsil/mecha",
+  "root_file": "/mecha.zig",
+  "description": "A parser combinator library"
+}
