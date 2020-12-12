@@ -89,7 +89,7 @@ fn readPackage() !void {
 
     try stdout.writeAll("source: ");
     pkg.root_file = try stdin.readUntilDelimiterAlloc(allocator, '\n', 512);
-    defer allocator.free(pkg.root_file);
+    defer if (pkg.root_file) |root_file| allocator.free(root_file);
 
     var tags = std.ArrayList([]const u8).init(allocator);
     defer {
