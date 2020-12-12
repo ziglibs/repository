@@ -1,0 +1,9 @@
+{
+  "author": "vrischmann",
+  "description": "Small wrapper around sqlite's C API",
+  "git": "https://github.com/vrischmann/zig-sqlite",
+  "root_file": "/sqlite.zig",
+  "tags": [
+    "database"
+  ]
+}
