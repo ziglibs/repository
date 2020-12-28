@@ -1,0 +1,9 @@
+{
+  "author": "vrischmann",
+  "description": "Cassandra CQL client",
+  "git": "https://github.com/vrischmann/zig-cassandra",
+  "root_file": "/src/lib.zig",
+  "tags": [
+    "database"
+  ]
+}
