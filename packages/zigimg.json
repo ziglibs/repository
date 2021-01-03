@@ -1,0 +1,9 @@
+{
+  "author": "mlarouche",
+  "tags": [
+    "game"
+  ],
+  "git": "https://github.com/zigimg/zigimg",
+  "root_file": "/zigimg.zig",
+  "description": "A work in progress library to create, process, read and write different image formats"
+}
