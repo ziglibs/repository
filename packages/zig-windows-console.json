@@ -1,0 +1,10 @@
+{
+  "author": "SuperAuguste",
+  "tags": [
+    "os",
+    "terminal"
+  ],
+  "git": "https://github.com/ziglibs/zig-windows-console",
+  "root_file": "/src/main.zig",
+  "description": "Tools for all your Zig + Windows Console needs!"
+}
