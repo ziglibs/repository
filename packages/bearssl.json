@@ -2,7 +2,7 @@
   "author": "xq",
   "description": "A BearSSL binding for Zig",
   "git": "https://github.com/MasterQ32/zig-bearssl",
-  "root_file": "/bearssl.zig",
+  "root_file": "/src/lib.zig",
   "tags": [
     "networking",
     "crypto",
