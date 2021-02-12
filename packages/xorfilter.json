@@ -1,0 +1,7 @@
+{
+  "author": "hexops",
+  "tags": ["algorithm"],
+  "git": "https://github.com/hexops/xorfilter.git",
+  "root_file": "/src/main.zig",
+  "description": "Zig implementation of Xor Filters: Faster and Smaller Than Bloom Filters"
+}
