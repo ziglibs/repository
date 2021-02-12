@@ -71,7 +71,7 @@ fn readPackage() !void {
     }
     defer allocator.free(path);
     errdefer {
-        std.fs.cwd().deleteFile(path) catch |e| std.debug.panic("Failed to delete file {}!", .{path});
+        std.fs.cwd().deleteFile(path) catch |e| std.debug.panic("Failed to delete file {s}!", .{path});
     }
     defer file.close();
 
@@ -110,7 +110,7 @@ fn readPackage() !void {
             if (tag.len == 0)
                 continue;
             if (tag_collection.get(tag) == null) {
-                try stdout.print("Tag '{}' does not exist!\n", .{tag});
+                try stdout.print("Tag '{s}' does not exist!\n", .{tag});
                 bad = true;
             }
         }
@@ -176,7 +176,7 @@ fn loadTags() !void {
 
             try tag_collection.put(try string_arena.dupe(u8, name), {}); // file names ought to be unique
         } else {
-            try stderr.print("{}/{} is not a json file!\n", .{ "tags", entry.name });
+            try stderr.print("{s}/{s} is not a json file!\n", .{ "tags", entry.name });
         }
     }
 }

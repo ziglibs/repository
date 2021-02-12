@@ -68,17 +68,17 @@ fn verifyFolder(directory_name: []const u8, verifier: VerifierFunction) !bool {
             };
 
             if (errors.items.len > 0) {
-                try stderr.print("{}/{} is not a valid package description file:\n", .{
+                try stderr.print("{s}/{s} is not a valid package description file:\n", .{
                     directory_name,
                     entry.name,
                 });
                 for (errors.items) |err| {
-                    try stderr.print("\t{}\n", .{err});
+                    try stderr.print("\t{s}\n", .{err});
                 }
                 success = false;
             }
         } else {
-            try stderr.print("{}/{} is not a json file!\n", .{ directory_name, entry.name });
+            try stderr.print("{s}/{s} is not a json file!\n", .{ directory_name, entry.name });
             success = false;
         }
     }
@@ -140,7 +140,7 @@ fn verifyPackageJson(
     for (pkg.tags) |tag| {
         const entry = tag_collection.get(tag);
         if (entry == null) {
-            try errors.append(try std.fmt.allocPrint(string_arena, "Tag '{}' does not exist!", .{tag}));
+            try errors.append(try std.fmt.allocPrint(string_arena, "Tag '{s}' does not exist!", .{tag}));
         }
     }
 }
