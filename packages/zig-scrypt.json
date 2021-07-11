@@ -1,0 +1,9 @@
+{
+  "author": "x13a",
+  "description": "The scrypt key derivation function in zig.",
+  "git": "https://github.com/x13a/zig-scrypt",
+  "root_file": "/src/scrypt.zig",
+  "tags": [
+    "crypto"
+  ]
+}
