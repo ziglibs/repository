@@ -1,0 +1,7 @@
+{
+  "author": "ominitay",
+  "tags": [],
+  "git": "https://github.com/ominitay/zigvale",
+  "root_file": "/zigvale.zig",
+  "description": "A Zig implementation of the stivale2 boot protocol"
+}
