@@ -1,0 +1,7 @@
+{
+  "author": "yrashk",
+  "tags": ["async"],
+  "git": "https://github.com/yrashk/zig-generator",
+  "root_file": "/src/lib.zig",
+  "description": "Async generator type"
+}
