@@ -1,22 +1,25 @@
 const std = @import("std");
 
-usingnamespace @import("shared.zig");
+const shared = @import("shared.zig");
+
+const PackageDescription = shared.PackageDescription;
+const TagDescription = shared.TagDescription;
 
 var tag_collection: std.StringHashMap(void) = undefined;
 
-var allocator: *std.mem.Allocator = undefined;
-var string_arena: *std.mem.Allocator = undefined;
+var allocator: std.mem.Allocator = undefined;
+var string_arena: std.mem.Allocator = undefined;
 
 pub fn main() !u8 {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer _ = gpa.deinit();
 
-    allocator = &gpa.allocator;
+    allocator = gpa.allocator();
 
     var string_arena_impl = std.heap.ArenaAllocator.init(allocator);
     defer string_arena_impl.deinit();
 
-    string_arena = &string_arena_impl.allocator;
+    string_arena = string_arena_impl.allocator();
 
     tag_collection = std.StringHashMap(void).init(allocator);
     defer tag_collection.deinit();
@@ -111,6 +114,8 @@ fn verifyPackageJson(
     json_data: []const u8,
     errors: *std.ArrayList([]const u8),
 ) !void {
+    _ = name;
+
     var options = std.json.ParseOptions{
         .allocator = allocator,
         .duplicate_field_behavior = .Error,

@@ -1,22 +1,25 @@
 const std = @import("std");
 
-usingnamespace @import("shared.zig");
+const shared = @import("shared.zig");
+
+const PackageDescription = shared.PackageDescription;
+const TagDescription = shared.TagDescription;
 
 var tag_collection: std.StringHashMap(void) = undefined;
 
-var allocator: *std.mem.Allocator = undefined;
-var string_arena: *std.mem.Allocator = undefined;
+var allocator: std.mem.Allocator = undefined;
+var string_arena: std.mem.Allocator = undefined;
 
 pub fn main() !u8 {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer _ = gpa.deinit();
 
-    allocator = &gpa.allocator;
+    allocator = gpa.allocator();
 
     var string_arena_impl = std.heap.ArenaAllocator.init(allocator);
     defer string_arena_impl.deinit();
 
-    string_arena = &string_arena_impl.allocator;
+    string_arena = string_arena_impl.allocator();
 
     tag_collection = std.StringHashMap(void).init(allocator);
     defer tag_collection.deinit();
@@ -71,7 +74,7 @@ fn readPackage() !void {
     }
     defer allocator.free(path);
     errdefer {
-        std.fs.cwd().deleteFile(path) catch |e| std.debug.panic("Failed to delete file {s}!", .{path});
+        std.fs.cwd().deleteFile(path) catch std.debug.panic("Failed to delete file {s}!", .{path});
     }
     defer file.close();
 
@@ -104,7 +107,7 @@ fn readPackage() !void {
         defer allocator.free(tag_string);
 
         var bad = false;
-        var iterator = std.mem.split(tag_string, ",");
+        var iterator = std.mem.split(u8, tag_string, ",");
         while (iterator.next()) |part| {
             const tag = std.mem.trim(u8, part, " \t\r\n");
             if (tag.len == 0)
@@ -117,7 +120,7 @@ fn readPackage() !void {
 
         if (bad) continue;
 
-        iterator = std.mem.split(tag_string, ",");
+        iterator = std.mem.split(u8, tag_string, ",");
         while (iterator.next()) |part| {
             const tag = std.mem.trim(u8, part, " \t\r\n");
             if (tag.len == 0)
