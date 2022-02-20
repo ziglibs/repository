@@ -1,0 +1,9 @@
+{
+  "author": "hazeycode",
+  "description": "ALSA (libasound) bindings",
+  "git": "https://github.com/hazeycode/zig-alsa",
+  "root_file": "/src/main.zig",
+  "tags": [
+    "binding", "audio",
+  ]
+}
