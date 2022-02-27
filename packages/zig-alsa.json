@@ -4,6 +4,7 @@
   "git": "https://github.com/hazeycode/zig-alsa",
   "root_file": "/src/main.zig",
   "tags": [
-    "binding", "audio",
+    "binding",
+    "audio"
   ]
 }
