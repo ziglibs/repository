@@ -1,0 +1,11 @@
+{
+  "author": "Guigui220D",
+  "tags": [
+    "circular",
+    "ring",
+    "buffer"
+  ],
+  "git": "https://github.com/Guigui220D/RingBuffer-Zig",
+  "root_file": "/ring_buffer.zig",
+  "description": "Thread-Safe template for a ring buffer with std compatible reader and writer and safety checks"
+}
