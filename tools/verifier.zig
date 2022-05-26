@@ -55,7 +55,7 @@ fn verifyFolder(directory_name: []const u8, verifier: VerifierFunction) !bool {
         if (entry.kind != .File)
             continue;
         if (std.mem.endsWith(u8, entry.name, ".json")) {
-            var file = try directory.openFile(entry.name, .{ .read = true, .write = false });
+            var file = try directory.openFile(entry.name, .{ .mode = .read_only });
             defer file.close();
 
             const source = try file.readToEndAlloc(allocator, 16384); // 16kB is a sane limit for a package description
