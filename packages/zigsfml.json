@@ -1,0 +1,14 @@
+{
+  "author": "Guigui220D",
+  "tags": [
+    "SFML",
+    "CSFML",
+    "graphics",
+    "audio",
+    "network",
+    "window"
+  ],
+  "git": "https://github.com/Guigui220D/zig-sfml-wrapper",
+  "root_file": "/src/sfml/sfml.zig",
+  "description": "Wrapper for the SFML (CSFML), the Simple and Fast Media Library, to easily make simple games"
+}
