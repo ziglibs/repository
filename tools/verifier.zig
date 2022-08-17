@@ -45,12 +45,14 @@ fn verifyFolder(directory_name: []const u8, verifier: VerifierFunction) !bool {
     const stderr_file = std.io.getStdErr();
     const stderr = stderr_file.writer();
 
-    var directory = try std.fs.cwd().openDir(directory_name, .{ .iterate = true, .no_follow = true });
+    var directory = try std.fs.cwd().openDir(directory_name, .{ .no_follow = true });
     defer directory.close();
+    var dirs = try std.fs.cwd().openIterableDir(directory_name, .{ .no_follow = true });
+    defer dirs.close();
 
     var success = true;
 
-    var iterator = directory.iterate();
+    var iterator = dirs.iterate();
     while (try iterator.next()) |entry| {
         if (entry.kind != .File)
             continue;
