@@ -12,4 +12,16 @@ pub fn build(b: *std.build.Builder) !void {
 
     const add_step = b.step("add", "Adds a new package");
     add_step.dependOn(&add.step);
+
+    try build_tools_fixer(b);
+}
+
+fn build_tools_fixer(b: *std.build.Builder) !void {
+    const exe = b.addExecutable("fix", "tools/fixer.zig");
+    exe.linkSystemLibrary("libcurl");
+    exe.linkLibC();
+    const run_cmd = exe.run();
+
+    const run_step = b.step("fix", "Fix GitHub package metadata");
+    run_step.dependOn(&run_cmd.step);
 }

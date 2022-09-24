@@ -136,17 +136,7 @@ fn readPackage() !void {
     }
 
     pkg.tags = tags.items;
-
-    try std.json.stringify(pkg, .{
-        .whitespace = .{
-            .indent = .{ .Space = 2 },
-            .separator = true,
-        },
-        .string = .{
-            .String = .{},
-        },
-    }, file.writer());
-    try file.writeAll("\n");
+    try pkg.writeTo(file.writer());
 }
 
 fn freePackage(pkg: *PackageDescription) void {
@@ -164,7 +154,7 @@ fn loadTags() !void {
     const stderr_file = std.io.getStdErr();
     const stderr = stderr_file.writer();
 
-    var directory = try std.fs.cwd().openDir("tags", .{ .iterate = true, .no_follow = true });
+    var directory = try std.fs.cwd().openIterableDir("tags", .{ .no_follow = true });
     defer directory.close();
 
     var iterator = directory.iterate();
@@ -172,7 +162,7 @@ fn loadTags() !void {
         if (entry.kind != .File)
             continue;
         if (std.mem.endsWith(u8, entry.name, ".json")) {
-            var file = try directory.openFile(entry.name, .{ .read = true, .write = false });
+            var file = try directory.dir.openFile(entry.name, .{});
             defer file.close();
 
             const name = entry.name[0 .. entry.name.len - 5];
