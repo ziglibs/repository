@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/ifreund/zig-xkbcommon",
   "root_file": "/src/xkbcommon.zig",
-  "description": "zig bindings for xkbcommon"
+  "description": "zig bindings for xkbcommon",
+  "license": "mit",
+  "updated_at": "2022-06-06T09:30:19Z",
+  "homepage": ""
 }

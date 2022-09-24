@@ -1,9 +1,12 @@
 {
   "author": "xq",
-  "description": "LoLa is a small programming language meant to be embedded into games.",
-  "git": "https://github.com/MasterQ32/LoLa",
-  "root_file": "/src/library/main.zig",
   "tags": [
     "programming-language"
-  ]
+  ],
+  "git": "https://github.com/MasterQ32/LoLa",
+  "root_file": "/src/library/main.zig",
+  "description": "LoLa is a small programming language meant to be embedded into games.",
+  "license": "mit",
+  "updated_at": "2022-09-21T14:06:07Z",
+  "homepage": "https://lola.random-projects.net/"
 }

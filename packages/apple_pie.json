@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/Luukdegram/apple_pie",
   "root_file": "/src/apple_pie.zig",
-  "description": "Basic HTTP server implementation in Zig"
+  "description": "Basic HTTP server implementation in Zig",
+  "license": "mit",
+  "updated_at": "2022-09-15T01:22:38Z",
+  "homepage": ""
 }

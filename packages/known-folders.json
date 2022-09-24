@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/ziglibs/known-folders",
   "root_file": "/known-folders.zig",
-  "description": "Provides access to well-known folders across several operating systems"
+  "description": "Provides access to well-known folders across several operating systems",
+  "license": "mit",
+  "updated_at": "2022-09-08T00:48:36Z",
+  "homepage": null
 }

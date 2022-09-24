@@ -1,9 +1,12 @@
 {
   "author": "xq",
-  "description": "An intel hex loader written in Zig",
-  "git": "https://github.com/MasterQ32/zig-ihex",
-  "root_file": "/ihex.zig",
   "tags": [
     "serialization"
-  ]
+  ],
+  "git": "https://github.com/MasterQ32/zig-ihex",
+  "root_file": "/ihex.zig",
+  "description": "An intel hex loader written in Zig",
+  "license": "mit",
+  "updated_at": "2021-07-14T14:35:38Z",
+  "homepage": null
 }

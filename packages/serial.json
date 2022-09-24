@@ -1,9 +1,12 @@
 {
   "author": "xq",
-  "description": "Serial port configuration library for Zig",
-  "git": "https://github.com/MasterQ32/zig-serial",
-  "root_file": "/serial.zig",
   "tags": [
     "os"
-  ]
+  ],
+  "git": "https://github.com/MasterQ32/zig-serial",
+  "root_file": "/serial.zig",
+  "description": "Serial port configuration library for Zig",
+  "license": "mit",
+  "updated_at": "2022-08-30T23:41:43Z",
+  "homepage": ""
 }

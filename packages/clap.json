@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/Hejsil/zig-clap",
   "root_file": "/clap.zig",
-  "description": "Simple command line argument parsing library"
+  "description": "Simple command line argument parsing library",
+  "license": "mit",
+  "updated_at": "2022-09-20T09:37:13Z",
+  "homepage": ""
 }

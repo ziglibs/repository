@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/jayschwa/dos.zig",
   "root_file": "/src/dos.zig",
-  "description": "DOS SDK for Zig"
+  "description": "DOS SDK for Zig",
+  "license": "mit",
+  "updated_at": "2022-09-21T11:12:10Z",
+  "homepage": ""
 }

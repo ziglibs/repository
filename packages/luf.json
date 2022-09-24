@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/Luukdegram/luf",
   "root_file": "/src/luf.zig",
-  "description": "Statically typed, embeddable, scripting language written in Zig."
+  "description": "Statically typed, embeddable, scripting language written in Zig.",
+  "license": "mit",
+  "updated_at": "2022-08-22T15:41:42Z",
+  "homepage": "https://github.com/Luukdegram/luf"
 }
