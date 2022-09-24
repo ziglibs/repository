@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/ziglibs/string-searching",
   "root_file": "/src/main.zig",
-  "description": "String(not limited to []const u8)-searching algorithms in zig"
+  "description": "String(not limited to []const u8)-searching algorithms in zig",
+  "license": "mit",
+  "updated_at": "2022-03-23T07:55:30Z",
+  "homepage": ""
 }

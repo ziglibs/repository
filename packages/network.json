@@ -1,9 +1,12 @@
 {
   "author": "xq",
-  "description": "A smallest-common-subset of socket functions for crossplatform networking, TCP & UDP",
-  "git": "https://github.com/MasterQ32/zig-network",
-  "root_file": "/network.zig",
   "tags": [
     "networking"
-  ]
+  ],
+  "git": "https://github.com/MasterQ32/zig-network",
+  "root_file": "/network.zig",
+  "description": "A smallest-common-subset of socket functions for crossplatform networking, TCP & UDP",
+  "license": "mit",
+  "updated_at": "2022-09-21T20:28:24Z",
+  "homepage": null
 }

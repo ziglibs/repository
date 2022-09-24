@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/swaywm/zig-wlroots",
   "root_file": "/src/wlroots.zig",
-  "description": "zig bindings for wlroots"
+  "description": "zig bindings for wlroots",
+  "license": "mit",
+  "updated_at": "2022-09-18T22:06:50Z",
+  "homepage": ""
 }

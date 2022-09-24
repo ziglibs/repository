@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/ziglibs/ansi-term",
   "root_file": "/src/main.zig",
-  "description": "Zig library for dealing with ANSI terminals"
+  "description": "Zig library for dealing with ANSI terminals",
+  "license": "mit",
+  "updated_at": "2022-09-08T00:48:50Z",
+  "homepage": ""
 }

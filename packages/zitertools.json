@@ -1,10 +1,13 @@
 {
   "author": "onebsv1",
-  "description": "Zig Itertools, a port of the python itertools library and builtins",
-  "git": "https://github.com/onebsv1/zitertools",
-  "root_file": "/src/main.zig",
   "tags": [
     "functional",
     "math"
-  ]
+  ],
+  "git": "https://github.com/onebsv1/zitertools",
+  "root_file": "/src/main.zig",
+  "description": "Zig Itertools, a port of the python itertools library and builtins",
+  "license": "mit",
+  "updated_at": "2022-03-23T07:53:42Z",
+  "homepage": ""
 }

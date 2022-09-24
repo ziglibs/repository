@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/zPSP-Dev/Zig-PSP",
   "root_file": "/src/psp/pspsdk.zig",
-  "description": "A PSP Toolchain allowing users to create PSP homebrew applications! (You need a custom build.zig!)"
+  "description": "A PSP Toolchain allowing users to create PSP homebrew applications! (You need a custom build.zig!)",
+  "license": "other",
+  "updated_at": "2022-09-09T14:28:00Z",
+  "homepage": ""
 }

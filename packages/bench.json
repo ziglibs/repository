@@ -3,5 +3,8 @@
   "tags": [],
   "git": "https://github.com/Hejsil/zig-bench",
   "root_file": "/bench.zig",
-  "description": "Simple benchmarking library"
+  "description": "Simple benchmarking library",
+  "license": "mit",
+  "updated_at": "2022-09-21T14:39:34Z",
+  "homepage": ""
 }

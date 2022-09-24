@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/ifreund/zig-pixman",
   "root_file": "/pixman.zig",
-  "description": "zig bindings for pixman"
+  "description": "zig bindings for pixman",
+  "license": "mit",
+  "updated_at": "2022-01-15T15:31:25Z",
+  "homepage": ""
 }

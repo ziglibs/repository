@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/suirad/adma",
   "root_file": "/src/adma.zig",
-  "description": "Multithread aware Slab Allocator"
+  "description": "Multithread aware Slab Allocator",
+  "license": "mit",
+  "updated_at": "2022-08-29T12:36:44Z",
+  "homepage": null
 }

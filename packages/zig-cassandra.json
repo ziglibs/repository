@@ -1,9 +1,12 @@
 {
   "author": "vrischmann",
-  "description": "Cassandra CQL client",
-  "git": "https://github.com/vrischmann/zig-cassandra",
-  "root_file": "/src/lib.zig",
   "tags": [
     "database"
-  ]
+  ],
+  "git": "https://github.com/vrischmann/zig-cassandra",
+  "root_file": "/src/lib.zig",
+  "description": "Cassandra CQL client",
+  "license": "mit",
+  "updated_at": "2022-07-18T22:43:17Z",
+  "homepage": ""
 }

@@ -1,7 +1,13 @@
 {
   "author": "Alexandre Chêne (kooparse)",
-  "tags": ["math", "game"],
+  "tags": [
+    "math",
+    "game"
+  ],
   "git": "https://github.com/kooparse/zalgebra",
   "root_file": "/src/main.zig",
-  "description": "Linear algebra library for games and computer graphics."
+  "description": "Linear algebra library for games and computer graphics.",
+  "license": "mit",
+  "updated_at": "2022-09-06T16:47:23Z",
+  "homepage": ""
 }

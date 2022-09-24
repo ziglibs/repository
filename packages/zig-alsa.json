@@ -1,10 +1,13 @@
 {
   "author": "hazeycode",
-  "description": "ALSA (libasound) bindings",
-  "git": "https://github.com/hazeycode/zig-alsa",
-  "root_file": "/src/main.zig",
   "tags": [
     "binding",
     "audio"
-  ]
+  ],
+  "git": "https://github.com/hazeycode/zig-alsa",
+  "root_file": "/src/main.zig",
+  "description": "ALSA (libasound) bindings",
+  "license": "0bsd",
+  "updated_at": "2022-02-19T21:43:37Z",
+  "homepage": null
 }

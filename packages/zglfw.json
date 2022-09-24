@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/Iridescence-Technologies/zglfw",
   "root_file": "/src/glfw.zig",
-  "description": "An idiomatic GLFW wrapper in Zig!"
+  "description": "An idiomatic GLFW wrapper in Zig!",
+  "license": "other",
+  "updated_at": "2022-08-12T17:21:33Z",
+  "homepage": ""
 }

@@ -3,5 +3,8 @@
   "tags": [],
   "git": "https://github.com/ominitay/zigvale",
   "root_file": "/zigvale.zig",
-  "description": "A Zig implementation of the stivale2 boot protocol"
+  "description": "A Zig implementation of the stivale2 boot protocol",
+  "license": "mit",
+  "updated_at": "2022-04-22T23:32:17Z",
+  "homepage": ""
 }

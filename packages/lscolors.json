@@ -6,5 +6,8 @@
   ],
   "git": "https://github.com/ziglibs/lscolors",
   "root_file": "/src/main.zig",
-  "description": "A zig library for colorizing paths according to LS_COLORS"
+  "description": "A zig library for colorizing paths according to LS_COLORS",
+  "license": "mit",
+  "updated_at": "2022-09-08T00:48:50Z",
+  "homepage": ""
 }

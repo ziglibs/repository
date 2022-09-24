@@ -5,5 +5,8 @@
   ],
   "git": "https://github.com/alexnask/interface.zig",
   "root_file": "/interface.zig",
-  "description": "Dynamic dispatch for zig made easy"
+  "description": "Dynamic dispatch for zig made easy",
+  "license": "mit",
+  "updated_at": "2022-09-20T01:14:28Z",
+  "homepage": null
 }
