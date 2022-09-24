@@ -49,7 +49,8 @@ pub const Client = struct {
 
     pub fn json(self: Self, comptime T: type, url: []const u8) !T {
         const resp = try self.request(url);
-        // std.log.debug("resp url:{s}, resp:{s}", .{ url, resp.items });
+        defer resp.deinit();
+
         var stream = std.json.TokenStream.init(resp.items);
         return try std.json.parse(T, &stream, .{ .allocator = self.allocator, .ignore_unknown_fields = true });
     }
