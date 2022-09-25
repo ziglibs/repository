@@ -21,12 +21,10 @@ const Repository = struct {
 };
 
 fn fetchRepositoryMetadata(allocator: mem.Allocator, hc: http.Client, repo_name: []const u8) !Repository {
-    var buf = std.ArrayList(u8).init(allocator);
-    defer buf.deinit();
+    const url = try std.fmt.allocPrintZ(allocator, "{s}/repos/{s}", .{ GITHUB_ROOT, repo_name });
+    defer allocator.free(url);
 
-    try buf.appendSlice(GITHUB_ROOT ++ "/repos/");
-    try buf.appendSlice(repo_name);
-    return try hc.json(Repository, buf.items);
+    return try hc.json(Repository, url);
 }
 
 fn githubRepoName(packageGit: []const u8) ?[]const u8 {
@@ -38,10 +36,11 @@ fn githubRepoName(packageGit: []const u8) ?[]const u8 {
 }
 
 fn fillGitHubPackage(allocator: mem.Allocator, hc: http.Client, file: fs.File) !void {
-    var buf = try allocator.alloc(u8, MAX_JSON_SIZE);
-    defer allocator.free(buf);
-    const readBytes = try file.readAll(buf);
-    var stream = json.TokenStream.init(buf[0..readBytes]);
+    var buf = std.ArrayList(u8).init(allocator);
+    try file.reader().readAllArrayList(&buf, MAX_JSON_SIZE);
+    defer buf.deinit();
+
+    var stream = json.TokenStream.init(buf.items);
     var packageDesc = try json.parse(PackageDescription, &stream, .{ .allocator = allocator, .ignore_unknown_fields = true });
 
     if (null == packageDesc.updated_at) {
@@ -56,6 +55,7 @@ fn fillGitHubPackage(allocator: mem.Allocator, hc: http.Client, file: fs.File) !
             }
 
             try file.seekTo(0);
+            try file.setEndPos(0);
             try packageDesc.writeTo(file.writer());
         }
     }
@@ -72,8 +72,11 @@ pub fn main() anyerror!void {
     const dir = try fs.cwd().openIterableDir("packages", .{});
     var walker = try dir.walk(allocator);
     defer walker.deinit();
+
     while (try walker.next()) |entry| {
         const file = try entry.dir.openFile(entry.basename, .{ .mode = .read_write });
+        defer file.close();
+
         try fillGitHubPackage(allocator, hc, file);
     }
 }

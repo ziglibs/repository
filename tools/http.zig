@@ -6,7 +6,7 @@ const cURL = @cImport({
     @cInclude("curl/curl.h");
 });
 
-const UA: []const u8 = "ziglibs http client";
+const UA: []const u8 = "ziglibs/1.0.0";
 
 pub const Client = struct {
     allocator: mem.Allocator,
@@ -28,7 +28,7 @@ pub const Client = struct {
         headers = cURL.curl_slist_append(headers, "Accept: application/vnd.github.v3+json");
         if (std.os.getenv("GITHUB_TOKEN")) |token| {
             var buf = std.ArrayList(u8).init(alloctor);
-            try buf.appendSlice("Authorization: token ");
+            try buf.appendSlice("Authorization: Bearer ");
             try buf.appendSlice(token);
             headers = cURL.curl_slist_append(headers, buf.items.ptr);
         }
@@ -47,7 +47,7 @@ pub const Client = struct {
         return Self{ .allocator = alloctor, .handle = handle, .headers = headers orelse unreachable };
     }
 
-    pub fn json(self: Self, comptime T: type, url: []const u8) !T {
+    pub fn json(self: Self, comptime T: type, url: [:0]const u8) !T {
         const resp = try self.request(url);
         defer resp.deinit();
 
@@ -57,9 +57,9 @@ pub const Client = struct {
 
     fn request(
         self: Self,
-        url: []const u8,
+        url: [:0]const u8,
     ) !RawResponse {
-        if (cURL.curl_easy_setopt(self.handle, cURL.CURLOPT_URL, url.ptr) != cURL.CURLE_OK)
+        if (cURL.curl_easy_setopt(self.handle, cURL.CURLOPT_URL, url) != cURL.CURLE_OK)
             return error.CouldNotSetURL;
 
         var response_buffer = RawResponse.init(self.allocator);
