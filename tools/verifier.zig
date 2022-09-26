@@ -41,7 +41,7 @@ const VerifierFunction = fn (
     errors: *std.ArrayList([]const u8),
 ) anyerror!void;
 
-fn verifyFolder(directory_name: []const u8, verifier: VerifierFunction) !bool {
+fn verifyFolder(directory_name: []const u8, comptime verifier: VerifierFunction) !bool {
     const stderr_file = std.io.getStdErr();
     const stderr = stderr_file.writer();
 
