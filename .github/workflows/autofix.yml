@@ -1,0 +1,36 @@
+name: Autofix
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '2 0 * * *'
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  fix:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Zig
+        uses: goto-bus-stop/setup-zig@v1
+        with:
+          version: master
+      - name: Fix package metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          sudo apt-get install -y libcurl4-openssl-dev
+          zig build fix
+      - name: Auto commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated Change to packages
+          file_pattern: 'packages/*.json'
+          commit_author: Actions <actions@github.com>
