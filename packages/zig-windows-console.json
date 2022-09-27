@@ -6,7 +6,7 @@
   ],
   "git": "https://github.com/ziglibs/zig-windows-console",
   "root_file": "/src/main.zig",
-  "description": "Tools for all your Zig + Windows Console needs!",
+  "description": "Zig Windows Console stuff",
   "license": "mit",
   "updated_at": "2022-09-09T09:28:57Z",
   "homepage": ""

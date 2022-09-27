@@ -6,7 +6,7 @@
   ],
   "git": "https://github.com/MasterQ32/SDL.zig",
   "root_file": "/src/lib.zig",
-  "description": "Wraps SDL2 into a nice and cozy zig-style API.",
+  "description": "A shallow wrapper around SDL that provides object API and error handling",
   "license": "mit",
   "updated_at": "2022-09-22T20:02:56Z",
   "homepage": ""

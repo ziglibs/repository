@@ -59,7 +59,7 @@ pub const Client = struct {
         self: Self,
         url: [:0]const u8,
     ) !RawResponse {
-        if (cURL.curl_easy_setopt(self.handle, cURL.CURLOPT_URL, url) != cURL.CURLE_OK)
+        if (cURL.curl_easy_setopt(self.handle, cURL.CURLOPT_URL, url.ptr) != cURL.CURLE_OK)
             return error.CouldNotSetURL;
 
         var response_buffer = RawResponse.init(self.allocator);

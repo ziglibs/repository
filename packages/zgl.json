@@ -6,7 +6,7 @@
   ],
   "git": "https://github.com/ziglibs/zgl",
   "root_file": "/zgl.zig",
-  "description": "Zig OpenGL wrapper based on libepoxy",
+  "description": "Zig OpenGL Wrapper",
   "license": "mit",
   "updated_at": "2022-09-14T07:19:28Z",
   "homepage": ""
