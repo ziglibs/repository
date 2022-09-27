@@ -14,7 +14,6 @@ pub fn build(b: *std.build.Builder) !void {
     add_step.dependOn(&add.step);
 
     try buildToolsFixer(b);
-    try buildToolsPager(b);
 }
 
 fn buildToolsFixer(b: *std.build.Builder) !void {
@@ -24,13 +23,5 @@ fn buildToolsFixer(b: *std.build.Builder) !void {
     const run_cmd = exe.run();
 
     const run_step = b.step("fix", "Fix GitHub package metadata");
-    run_step.dependOn(&run_cmd.step);
-}
-
-fn buildToolsPager(b: *std.build.Builder) !void {
-    const exe = b.addExecutable("page", "tools/pager.zig");
-    const run_cmd = exe.run();
-
-    const run_step = b.step("page", "Generate HTML page for packages");
     run_step.dependOn(&run_cmd.step);
 }
