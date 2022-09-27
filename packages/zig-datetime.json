@@ -1,0 +1,12 @@
+{
+  "author": "frmdstryr",
+  "tags": [
+    "datetime"
+  ],
+  "git": "https://github.com/frmdstryr/zig-datetime",
+  "root_file": "/src/main.zig",
+  "description": "A date and time module for Zig",
+  "license": null,
+  "updated_at": null,
+  "homepage": null
+}
