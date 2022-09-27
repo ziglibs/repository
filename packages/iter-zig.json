@@ -6,7 +6,7 @@
   ],
   "git": "https://github.com/eldesh/iter-zig",
   "root_file": "/src/lib.zig",
-  "description": "A basic iterator library",
+  "description": "A basic iterator library written in Zig",
   "license": "bsd-2-clause",
   "updated_at": "2022-08-06T11:44:30Z",
   "homepage": null

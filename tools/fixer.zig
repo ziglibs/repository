@@ -14,6 +14,7 @@ const MAX_JSON_SIZE = 4096;
 // This struct define which fields to fill in
 const Repository = struct {
     homepage: ?[]const u8,
+    description: ?[]const u8,
     updated_at: ?[]const u8,
     license: ?struct {
         key: []const u8,
@@ -41,23 +42,25 @@ fn fillGitHubPackage(allocator: mem.Allocator, hc: http.Client, file: fs.File) !
     defer buf.deinit();
 
     var stream = json.TokenStream.init(buf.items);
-    var packageDesc = try json.parse(PackageDescription, &stream, .{ .allocator = allocator, .ignore_unknown_fields = true });
+    var package_desc = try json.parse(PackageDescription, &stream, .{ .allocator = allocator, .ignore_unknown_fields = true });
 
-    if (null == packageDesc.updated_at) {
-        if (githubRepoName(packageDesc.git)) |repoName| {
-            const repo = try fetchRepositoryMetadata(allocator, hc, repoName);
-            packageDesc.updated_at = repo.updated_at;
-            if (repo.license) |license| {
-                packageDesc.license = license.key;
-            }
-            if (repo.homepage) |homepage| {
-                packageDesc.homepage = homepage;
-            }
-
-            try file.seekTo(0);
-            try file.setEndPos(0);
-            try packageDesc.writeTo(file.writer());
+    if (githubRepoName(package_desc.git)) |repo_name| {
+        std.log.info("Fetch package metadata, repo:{s}", .{repo_name});
+        const repo = try fetchRepositoryMetadata(allocator, hc, repo_name);
+        package_desc.updated_at = repo.updated_at;
+        if (repo.license) |license| {
+            package_desc.license = license.key;
         }
+        if (repo.homepage) |homepage| {
+            package_desc.homepage = homepage;
+        }
+        if (repo.description) |description| {
+            package_desc.description = description;
+        }
+
+        try file.seekTo(0);
+        try file.setEndPos(0);
+        try package_desc.writeTo(file.writer());
     }
 }
 

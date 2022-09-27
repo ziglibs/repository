@@ -6,7 +6,7 @@
   ],
   "git": "https://github.com/onebsv1/zitertools",
   "root_file": "/src/main.zig",
-  "description": "Zig Itertools, a port of the python itertools library and builtins",
+  "description": "An improved rewrite of the python itertools library to Zig.",
   "license": "mit",
   "updated_at": "2022-03-23T07:53:42Z",
   "homepage": ""

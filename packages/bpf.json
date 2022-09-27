@@ -6,7 +6,7 @@
   ],
   "git": "https://github.com/mattnite/bpf",
   "root_file": "/exports.zig",
-  "description": "A BPF Library for Zig",
+  "description": "[WIP] Zig BPF library",
   "license": "mit",
   "updated_at": "2022-08-29T17:13:29Z",
   "homepage": ""

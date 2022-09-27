@@ -6,8 +6,8 @@
   ],
   "git": "https://github.com/ziglibs/zlm",
   "root_file": "/zlm.zig",
-  "description": "Zig linear mathematics library suitable for games",
+  "description": "Zig linear mathemathics",
   "license": "mit",
-  "updated_at": "2022-09-08T00:48:50Z",
+  "updated_at": "2022-09-24T16:51:50Z",
   "homepage": null
 }

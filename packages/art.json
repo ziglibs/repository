@@ -3,8 +3,8 @@
   "tags": [],
   "git": "https://github.com/travisstaloch/art.zig",
   "root_file": "/src/art.zig",
-  "description": "An Adaptive Radix Tree ported from c to zig",
+  "description": "An Adaptive Radix Tree ported from c",
   "license": "mit",
-  "updated_at": "2022-07-28T07:06:09Z",
+  "updated_at": "2022-09-24T16:58:40Z",
   "homepage": ""
 }

@@ -5,7 +5,7 @@
   ],
   "git": "https://github.com/ifreund/zig-wayland",
   "root_file": null,
-  "description": "zig bindings and scanner for libwayland",
+  "description": "Zig wayland scanner and libwayland bindings",
   "license": "mit",
   "updated_at": "2022-08-26T06:16:21Z",
   "homepage": ""
