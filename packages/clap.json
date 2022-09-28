@@ -7,6 +7,6 @@
   "root_file": "/clap.zig",
   "description": "Simple command line argument parsing library",
   "license": "mit",
-  "updated_at": "2022-09-26T08:32:21Z",
+  "updated_at": "2022-09-27T23:13:32Z",
   "homepage": ""
 }
