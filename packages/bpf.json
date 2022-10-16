@@ -8,6 +8,6 @@
   "root_file": "/exports.zig",
   "description": "[WIP] Zig BPF library",
   "license": "mit",
-  "updated_at": "2022-08-29T17:13:29Z",
+  "updated_at": "2022-10-15T09:10:05Z",
   "homepage": ""
 }
