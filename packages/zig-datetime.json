@@ -7,6 +7,6 @@
   "root_file": "/src/main.zig",
   "description": "A date and time module for Zig",
   "license": "mit",
-  "updated_at": "2022-08-03T20:35:28Z",
+  "updated_at": "2022-10-18T04:00:58Z",
   "homepage": ""
 }
