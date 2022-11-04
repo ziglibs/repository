@@ -7,6 +7,6 @@
   "root_file": "/src/main.zig",
   "description": "Zig library for dealing with ANSI terminals",
   "license": "mit",
-  "updated_at": "2022-10-17T16:45:31Z",
+  "updated_at": "2022-11-03T19:33:19Z",
   "homepage": ""
 }

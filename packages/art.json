@@ -5,6 +5,6 @@
   "root_file": "/src/art.zig",
   "description": "An Adaptive Radix Tree ported from c",
   "license": "mit",
-  "updated_at": "2022-09-24T16:58:40Z",
+  "updated_at": "2022-10-31T15:58:15Z",
   "homepage": ""
 }

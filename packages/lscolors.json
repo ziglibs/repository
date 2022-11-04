@@ -8,6 +8,6 @@
   "root_file": "/src/main.zig",
   "description": "A zig library for colorizing paths according to LS_COLORS",
   "license": "mit",
-  "updated_at": "2022-10-17T12:26:24Z",
+  "updated_at": "2022-11-03T23:26:02Z",
   "homepage": ""
 }
