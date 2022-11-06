@@ -7,6 +7,6 @@
   "root_file": "/src/main.zig",
   "description": "A WebSocket 1.3 library for Zig",
   "license": "mit",
-  "updated_at": "2022-10-06T14:47:57Z",
+  "updated_at": "2022-11-05T12:03:33Z",
   "homepage": ""
 }

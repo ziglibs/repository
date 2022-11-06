@@ -8,6 +8,6 @@
   "root_file": "/src/main.zig",
   "description": "Linear algebra library for games and real-time graphics.",
   "license": "mit",
-  "updated_at": "2022-11-02T16:07:20Z",
+  "updated_at": "2022-11-05T05:26:06Z",
   "homepage": ""
 }
