@@ -7,6 +7,6 @@
   "root_file": "/src/index.zig",
   "description": "Support for x86_64 specific instructions (e.g. TLB flush), registers (e.g. control registers), and structures (e.g. page tables)",
   "license": "mit",
-  "updated_at": "2022-08-24T10:47:13Z",
+  "updated_at": "2022-11-06T23:47:59Z",
   "homepage": ""
 }

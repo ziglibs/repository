@@ -7,6 +7,6 @@
   "root_file": "/src/library/main.zig",
   "description": "LoLa is a small programming language meant to be embedded into games.",
   "license": "mit",
-  "updated_at": "2022-10-23T16:38:15Z",
+  "updated_at": "2022-11-06T16:32:14Z",
   "homepage": "https://lola.random-projects.net/"
 }
