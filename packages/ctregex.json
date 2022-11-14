@@ -8,6 +8,6 @@
   "root_file": "/ctregex.zig",
   "description": "Compile time regular expressions in zig",
   "license": null,
-  "updated_at": "2022-11-05T11:17:14Z",
+  "updated_at": "2022-11-13T15:27:32Z",
   "homepage": null
 }
