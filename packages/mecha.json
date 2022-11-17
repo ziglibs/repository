@@ -8,6 +8,6 @@
   "root_file": "/mecha.zig",
   "description": "A parser combinator library for Zig",
   "license": "mit",
-  "updated_at": "2022-11-14T13:25:46Z",
+  "updated_at": "2022-11-16T10:19:27Z",
   "homepage": ""
 }

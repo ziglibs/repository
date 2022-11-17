@@ -7,6 +7,6 @@
   "root_file": "/network.zig",
   "description": "A smallest-common-subset of socket functions for crossplatform networking, TCP & UDP",
   "license": "mit",
-  "updated_at": "2022-11-14T06:14:02Z",
+  "updated_at": "2022-11-16T12:06:01Z",
   "homepage": null
 }
