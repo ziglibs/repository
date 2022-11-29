@@ -7,6 +7,6 @@
   "root_file": "/src/xkbcommon.zig",
   "description": "Zig bindings for xkbcommon",
   "license": "mit",
-  "updated_at": "2022-06-06T09:30:19Z",
+  "updated_at": "2022-11-28T09:48:35Z",
   "homepage": ""
 }
