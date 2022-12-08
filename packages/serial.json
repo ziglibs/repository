@@ -7,6 +7,6 @@
   "root_file": "/serial.zig",
   "description": "Serial port configuration library for Zig",
   "license": "mit",
-  "updated_at": "2022-12-06T08:46:18Z",
+  "updated_at": "2022-12-07T01:54:23Z",
   "homepage": ""
 }
