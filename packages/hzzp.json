@@ -7,6 +7,6 @@
   "root_file": "/src/main.zig",
   "description": "A HTTP/1.0 and HTTP/1.1 library for Zig",
   "license": "mit",
-  "updated_at": "2022-12-07T20:18:48Z",
+  "updated_at": "2022-12-12T02:11:56Z",
   "homepage": ""
 }
