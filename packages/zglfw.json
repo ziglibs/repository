@@ -7,6 +7,6 @@
   "root_file": "/src/glfw.zig",
   "description": "A thin, idiomatic wrapper for GLFW. Written in Zig, for Zig!",
   "license": "other",
-  "updated_at": "2022-10-13T13:41:31Z",
+  "updated_at": "2022-12-15T11:23:44Z",
   "homepage": ""
 }
