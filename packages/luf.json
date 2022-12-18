@@ -7,6 +7,6 @@
   "root_file": "/src/luf.zig",
   "description": "Statically typed, embeddable, scripting language written in Zig.",
   "license": "mit",
-  "updated_at": "2022-11-23T13:42:37Z",
+  "updated_at": "2022-12-17T13:36:08Z",
   "homepage": "https://github.com/Luukdegram/luf"
 }
