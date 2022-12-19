@@ -7,6 +7,6 @@
   "root_file": "/known-folders.zig",
   "description": "Provides access to well-known folders across several operating systems",
   "license": "mit",
-  "updated_at": "2022-12-16T06:12:47Z",
+  "updated_at": "2022-12-18T14:26:46Z",
   "homepage": null
 }
