@@ -7,6 +7,6 @@
   "root_file": "/zigimg.zig",
   "description": "Zig library for reading and writing different image formats",
   "license": "mit",
-  "updated_at": "2022-12-20T22:00:26Z",
+  "updated_at": "2022-12-26T07:08:43Z",
   "homepage": ""
 }
