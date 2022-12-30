@@ -7,6 +7,6 @@
   "root_file": "/ihex.zig",
   "description": "An intel hex loader written in Zig",
   "license": "mit",
-  "updated_at": "2022-11-25T16:56:40Z",
+  "updated_at": "2022-12-29T09:55:09Z",
   "homepage": null
 }
