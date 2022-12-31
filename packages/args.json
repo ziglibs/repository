@@ -7,6 +7,6 @@
   "root_file": "/args.zig",
   "description": "Simple-to-use argument parser with struct-based config",
   "license": "mit",
-  "updated_at": "2022-12-29T09:55:17Z",
+  "updated_at": "2022-12-30T14:53:38Z",
   "homepage": null
 }
