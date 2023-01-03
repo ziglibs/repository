@@ -7,6 +7,6 @@
   "root_file": "/uri.zig",
   "description": "A small URI parser that parses URIs after RFC3986",
   "license": "mit",
-  "updated_at": "2022-11-10T21:03:22Z",
+  "updated_at": "2023-01-02T13:43:31Z",
   "homepage": null
 }
