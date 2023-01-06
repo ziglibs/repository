@@ -7,6 +7,6 @@
   "root_file": "/src/adma.zig",
   "description": "A general purpose, multithreaded capable slab allocator for Zig",
   "license": "mit",
-  "updated_at": "2022-12-24T13:57:17Z",
+  "updated_at": "2023-01-05T04:54:50Z",
   "homepage": null
 }
