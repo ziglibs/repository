@@ -23,6 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          sudo apt-get update -y
           sudo apt-get install -y libcurl4-openssl-dev
           zig build fix
       - name: Auto commit
