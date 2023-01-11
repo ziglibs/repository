@@ -7,6 +7,6 @@
   "root_file": "/src/main.zig",
   "description": "fastfilter: Binary fuse & xor filters for Zig (faster and smaller than bloom filters)",
   "license": "other",
-  "updated_at": "2023-01-06T17:45:31Z",
+  "updated_at": "2023-01-10T06:05:57Z",
   "homepage": ""
 }
