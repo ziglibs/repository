@@ -5,6 +5,6 @@
   "root_file": "/zigvale.zig",
   "description": "A Zig implementation of the stivale2 boot protocol",
   "license": "mit",
-  "updated_at": "2022-04-22T23:32:17Z",
+  "updated_at": "2023-01-28T19:33:58Z",
   "homepage": ""
 }

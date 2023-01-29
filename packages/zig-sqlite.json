@@ -7,6 +7,6 @@
   "root_file": "/sqlite.zig",
   "description": "zig-sqlite is a small wrapper around sqlite's C API, making it easier to use with Zig. ",
   "license": "mit",
-  "updated_at": "2023-01-15T18:31:50Z",
+  "updated_at": "2023-01-28T06:15:38Z",
   "homepage": ""
 }
