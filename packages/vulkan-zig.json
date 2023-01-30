@@ -8,6 +8,6 @@
   "root_file": "/generator/index.zig",
   "description": "Vulkan binding generator for Zig",
   "license": "mit",
-  "updated_at": "2023-01-22T10:35:03Z",
+  "updated_at": "2023-01-29T05:55:52Z",
   "homepage": ""
 }
