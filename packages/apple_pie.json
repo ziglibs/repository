@@ -7,6 +7,6 @@
   "root_file": "/src/apple_pie.zig",
   "description": "Basic HTTP server implementation in Zig",
   "license": "mit",
-  "updated_at": "2023-01-19T05:46:59Z",
+  "updated_at": "2023-02-02T03:43:57Z",
   "homepage": ""
 }
