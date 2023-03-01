@@ -1,8 +1,14 @@
 const std = @import("std");
 
 pub fn build(b: *std.build.Builder) !void {
-    const verifier = b.addExecutable("verifier", "tools/verifier.zig");
-    const adder = b.addExecutable("adder", "tools/adder.zig");
+    const verifier = b.addExecutable(.{
+        .name = "verifier",
+        .root_source_file = .{ .path = "tools/verifier.zig" },
+    });
+    const adder = b.addExecutable(.{
+        .name = "adder",
+        .root_source_file = .{ .path = "tools/adder.zig" },
+    });
 
     const verify = verifier.run();
     const add = adder.run();
@@ -17,7 +23,10 @@ pub fn build(b: *std.build.Builder) !void {
 }
 
 fn buildToolsFixer(b: *std.build.Builder) !void {
-    const exe = b.addExecutable("fix", "tools/fixer.zig");
+    const exe = b.addExecutable(.{
+        .name = "fix",
+        .root_source_file = .{ .path = "tools/fixer.zig" },
+    });
     exe.linkSystemLibrary("libcurl");
     exe.linkLibC();
     const run_cmd = exe.run();
