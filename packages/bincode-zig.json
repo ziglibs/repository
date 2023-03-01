@@ -1,0 +1,12 @@
+{
+  "author": "Quetzal Bradley",
+  "tags": [
+    "serialization"
+  ],
+  "git": "https://github.com/qbradley/bincode-zig",
+  "root_file": "/bincode.zig",
+  "description": "A zig binary serializer/deserializer that is compatible with the rust bincode crate.",
+  "license": "mit",
+  "updated_at": null,
+  "homepage": null
+}
