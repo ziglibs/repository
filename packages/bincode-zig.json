@@ -7,6 +7,6 @@
   "root_file": "/bincode.zig",
   "description": "A zig binary serializer/deserializer that is compatible with the rust bincode crate.",
   "license": "mit",
-  "updated_at": null,
+  "updated_at": "2023-03-01T13:11:05Z",
   "homepage": null
 }

@@ -9,6 +9,6 @@
   "root_file": "/src/lib.zig",
   "description": "A BearSSL binding for Zig",
   "license": "mit",
-  "updated_at": "2022-10-30T05:33:41Z",
+  "updated_at": "2023-03-03T17:44:52Z",
   "homepage": null
 }

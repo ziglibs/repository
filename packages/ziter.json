@@ -6,8 +6,8 @@
   ],
   "git": "https://github.com/Hejsil/ziter",
   "root_file": "/ziter.zig",
-  "description": "Best iterator library for Zig (fight me!)",
+  "description": "The missing iterators for Zig",
   "license": "mit",
-  "updated_at": "2022-12-04T13:57:25Z",
+  "updated_at": "2023-03-03T09:18:10Z",
   "homepage": ""
 }

@@ -8,6 +8,6 @@
   "root_file": "/src/lib.zig",
   "description": "A basic iterator library written in Zig",
   "license": "bsd-2-clause",
-  "updated_at": "2022-10-13T15:48:30Z",
+  "updated_at": "2023-02-21T00:03:41Z",
   "homepage": ""
 }

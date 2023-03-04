@@ -7,6 +7,6 @@
   "root_file": "/src/wlroots.zig",
   "description": "Zig bindings for wlroots",
   "license": "mit",
-  "updated_at": "2023-01-16T12:28:39Z",
+  "updated_at": "2023-02-27T04:42:11Z",
   "homepage": ""
 }
