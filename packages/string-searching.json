@@ -7,6 +7,6 @@
   "root_file": "/src/main.zig",
   "description": "String(not limited to []const u8)-searching algorithms in zig",
   "license": "mit",
-  "updated_at": "2023-01-21T16:34:52Z",
+  "updated_at": "2023-03-23T06:10:43Z",
   "homepage": ""
 }
