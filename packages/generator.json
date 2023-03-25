@@ -7,6 +7,6 @@
   "root_file": "/src/lib.zig",
   "description": "Async generator type for Zig",
   "license": "mit",
-  "updated_at": "2022-11-02T01:30:38Z",
+  "updated_at": "2023-03-24T21:07:14Z",
   "homepage": null
 }
