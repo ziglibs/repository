@@ -8,6 +8,6 @@
   "root_file": "/src/lib.zig",
   "description": "A shallow wrapper around SDL that provides object API and error handling",
   "license": "mit",
-  "updated_at": "2023-03-17T03:30:26Z",
+  "updated_at": "2023-03-30T07:28:56Z",
   "homepage": ""
 }
