@@ -7,6 +7,6 @@
   "root_file": "/src/psp/pspsdk.zig",
   "description": "A project to bring the Zig Programming Language to the Sony PlayStation Portable!",
   "license": "other",
-  "updated_at": "2022-12-30T13:09:53Z",
+  "updated_at": "2023-04-05T20:44:18Z",
   "homepage": ""
 }
