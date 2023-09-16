@@ -3,7 +3,7 @@
 This is one community-maintained repository of zig packages.
 
 ## Contributions
-If you have an activly maintained package, feel free to create a PR that adds your package to the repository! If you feel like it, you're also free to add other peoples packages!
+If you have an actively maintained package, feel free to create a PR that adds your package to the repository! If you feel like it, you're also free to add other peoples packages!
 
 ### Adding new packages
 
