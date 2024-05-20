@@ -1,0 +1,15 @@
+{
+  "author": "zig-multimedia",
+  "tags": [
+    "cpuid",
+    "x86",
+    "asm",
+    "wrapper"
+  ],
+  "git": "https://codeberg.org/zig-multimedia/cpuid",
+  "root_file": "/src/main.zig",
+  "description": "A Zig package to check cpuid features on x86 processors.",
+  "license": "unlicense",
+  "updated_at": "2024-05-20T19:53Z",
+  "homepage": null
+}
