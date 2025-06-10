@@ -1,0 +1,7 @@
+{
+  "author": "vmintf",
+  "description": "A zig language for environment library.",
+  "git": "https://github.com/vmintf/SimpleEnvs",
+  "root_file": "src/root.zig",
+  "tags": ["os", "string", "datastructure"]
+}
