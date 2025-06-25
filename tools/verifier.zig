@@ -45,16 +45,16 @@ fn verifyFolder(directory_name: []const u8, comptime verifier: VerifierFunction)
     const stderr_file = std.io.getStdErr();
     const stderr = stderr_file.writer();
 
-    var directory = try std.fs.cwd().openDir(directory_name, .{ .no_follow = true });
+    var directory = try std.fs.cwd().openDir(directory_name, .{ .iterate = true, .no_follow = true });
     defer directory.close();
-    var dirs = try std.fs.cwd().openIterableDir(directory_name, .{ .no_follow = true });
+    var dirs = try std.fs.cwd().openDir(directory_name, .{ .iterate = true, .no_follow = true });
     defer dirs.close();
 
     var success = true;
 
     var iterator = dirs.iterate();
     while (try iterator.next()) |entry| {
-        if (entry.kind != .File)
+        if (entry.kind != .file)
             continue;
         if (std.mem.endsWith(u8, entry.name, ".json")) {
             var file = try directory.openFile(entry.name, .{ .mode = .read_only });
@@ -96,16 +96,30 @@ fn verifyTagJson(
     json_data: []const u8,
     errors: *std.ArrayList([]const u8),
 ) !void {
-    var options = std.json.ParseOptions{
-        .allocator = allocator,
-        .duplicate_field_behavior = .Error,
+    const options = std.json.ParseOptions{};
+
+    const parse_result = try std.json.parseFromSlice(std.json.Value, allocator, json_data, options);
+    const root = parse_result.value;
+    defer parse_result.deinit();
+
+    if (root != .object) {
+        try errors.append("Root JSON is not an object");
+        return;
+    }
+
+    const obj = root.object;
+
+    const description_val = obj.get("description") orelse {
+        try errors.append("Missing field: description");
+        return;
     };
-    var stream = std.json.TokenStream.init(json_data);
 
-    const tag = try std.json.parse(TagDescription, &stream, options);
-    defer std.json.parseFree(TagDescription, tag, options);
+    if (description_val != .string) {
+        try errors.append("Field 'description' is not a string");
+        return;
+    }
 
-    if (tag.description.len == 0)
+    if (description_val.string.len == 0)
         try errors.append("description is empty!");
 
     try tag_collection.put(try string_arena.dupe(u8, name), {}); // file names ought to be unique
@@ -118,36 +132,81 @@ fn verifyPackageJson(
 ) !void {
     _ = name;
 
-    var options = std.json.ParseOptions{
-        .allocator = allocator,
-        .duplicate_field_behavior = .Error,
+    const options = std.json.ParseOptions{};
+
+    const parse_result = try std.json.parseFromSlice(std.json.Value, allocator, json_data, options);
+    const root = parse_result.value;
+    defer parse_result.deinit();
+
+    if (root != .object) {
+        try errors.append("Root JSON is not an object");
+        return;
+    }
+
+    const obj = root.object;
+
+    const author_val = obj.get("author") orelse {
+        try errors.append("Missing field: author");
+        return;
     };
-    var stream = std.json.TokenStream.init(json_data);
-
-    const pkg = try std.json.parse(PackageDescription, &stream, options);
-    defer std.json.parseFree(PackageDescription, pkg, options);
-
-    if (pkg.author.len == 0)
+    if (author_val != .string) {
+        try errors.append("Field 'author' is not a string");
+        return;
+    }
+    if (author_val.string.len == 0)
         try errors.append("author is empty!");
 
-    if (pkg.git.len == 0)
+    const git_val = obj.get("git") orelse {
+        try errors.append("Missing field: git");
+        return;
+    };
+    if (git_val != .string) {
+        try errors.append("Field 'git' is not a string");
+        return;
+    }
+    if (git_val.string.len == 0)
         try errors.append("git is empty!");
 
-    if (pkg.description.len == 0)
+    const description_val = obj.get("description") orelse {
+        try errors.append("Missing field: description");
+        return;
+    };
+    if (description_val != .string) {
+        try errors.append("Field 'description' is not a string");
+        return;
+    }
+    if (description_val.string.len == 0)
         try errors.append("description is empty!");
 
-    if (pkg.root_file) |root| {
-        if (root.len == 0) {
-            try errors.append("root_file is empty! Use 'null' if the root file is unrequired.");
-        } else if (!std.mem.startsWith(u8, root, "/")) {
-            try errors.append("root_file must start with a '/'!");
+    if (obj.get("root_file")) |rf_val| {
+        switch (rf_val) {
+            .null => {}, // okay, keine Prüfung
+            .string => |root_file| {
+                if (root_file.len == 0) {
+                    try errors.append("root_file is empty! Use 'null' if unrequired.");
+                } else if (!std.mem.startsWith(u8, root_file, "/")) {
+                    try errors.append("root_file must start with '/'!");
+                }
+            },
+            else => try errors.append("root_file must be a string or null"),
         }
     }
 
-    for (pkg.tags) |tag| {
-        const entry = tag_collection.get(tag);
-        if (entry == null) {
-            try errors.append(try std.fmt.allocPrint(string_arena, "Tag '{s}' does not exist!", .{tag}));
+    if (obj.get("tags")) |tags_val| {
+        switch (tags_val) {
+            .array => |tags_array| {
+                for (tags_array.items) |tag_val| {
+                    switch (tag_val) {
+                        .string => |tag| {
+                            if (tag_collection.get(tag) == null) {
+                                try errors.append(try std.fmt.allocPrint(string_arena, "Tag '{s}' does not exist!", .{tag}));
+                            }
+                        },
+                        else => try errors.append("All tags must be strings"),
+                    }
+                }
+            },
+            else => try errors.append("tags must be an array"),
         }
     }
 }
