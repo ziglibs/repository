@@ -1,6 +1,6 @@
 const std = @import("std");
 
-pub fn build(b: *std.build.Builder) !void {
+pub fn build(b: *std.Build) void {
     const verifier = b.addExecutable(.{
         .name = "verifier",
         .root_source_file = .{ .path = "tools/verifier.zig" },
