@@ -1,0 +1,11 @@
+{
+  "author": "PrivKey",
+  "description": "A Zig library for the Nostr protocol with event parsing, signing, filters, and relay message handling.",
+  "git": "https://github.com/privkeyio/libnostr-z",
+  "root_file": "/src/root.zig",
+  "tags": [
+    "crypto",
+    "networking",
+    "nostr"
+  ]
+}
