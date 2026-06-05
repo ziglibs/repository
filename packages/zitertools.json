@@ -1,13 +1,13 @@
 {
-  "author": "onebsv1",
+  "author": "zerobsv",
   "tags": [
     "functional",
     "math"
   ],
-  "git": "https://github.com/onebsv1/zitertools",
+  "git": "https://github.com/zerobsv/zitertools",
   "root_file": "/src/main.zig",
   "description": "An improved rewrite of the python itertools library to Zig.",
   "license": "mit",
-  "updated_at": "2022-03-23T07:53:42Z",
+  "updated_at": "2022-03-23T07:53:",
   "homepage": ""
 }
