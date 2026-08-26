@@ -1,0 +1,12 @@
+{
+  "author": "Null Pointer Monster",
+  "tags": [
+    "serialization"
+  ],
+  "git": "https://github.com/npmonster/yayl",
+  "root_file": "/src/yaml.zig",
+  "description": "YAYL: Yet Another YAML Library — a native-Zig YAML parser and emitter, converted from the C library libfyaml",
+  "license": "mit",
+  "updated_at": "2026-08-26T14:39:42Z",
+  "homepage": "https://github.com/npmonster/yayl"
+}
